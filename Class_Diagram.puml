@@ -1,0 +1,33 @@
+@startuml Diagrama de Clases
+class Player{
+    + Posicion
+    + Numero
+}
+class Trainer{
+    + Anos_Exp
+    + Acreditacion
+}
+class Captain{}
+class Team{
+    + Nombre
+    + Registro
+}
+class Person{
+    + Nombre
+    # Telefono
+    - Direccion
+}
+class Game{
+    + Puntuacion
+    + Localidad
+}
+
+Team "6..20" *-- "many" Player
+Team "1" o-- "1" Captain
+Player <|-- Captain
+Person <|-- Player
+Person <|-- Trainer
+Team "1..many" o-- "1" Trainer
+Game -- Team
+
+@enduml
