@@ -1,0 +1,87 @@
+@startuml Juego
+object Jugador_1{
+    Nombre = "Jefferson Soteldo"
+    Dorsal = 10
+    Posicion = Mediapunta
+    Telefono : protegido
+    Direccion : privada
+}
+object Jugador_2{
+    Nombre = "Salomon Rondon"
+    Dorsal = 23
+    Posicion = Delantero
+    Telefono : protegido
+    Direccion : privada
+}
+object Jugador_3{
+    Nombre = "Tomas Rincon"
+    Dorsal = 8
+    Posicion = Centrocampista
+    Telefono : protegido
+    Direccion : privada
+}
+object Jugador_4{
+    Nombre = "James Rodriguez"
+    Dorsal = 10
+    Posicion = Centrocampista
+    Telefono : protegido
+    Direccion : privada
+}
+object Jugador_5{
+    Nombre = "Luis Fernando Dias"
+    Dorsal = 7
+    Posicion = Extremo Izquierdo
+    Telefono : protegido
+    Direccion : privada
+}
+object Jugador_6{
+    Nombre = "Daniel Munos"
+    Dorsal = 21
+    Posicion = Defensa
+    Telefono : protegido
+    Direccion : privada
+}
+object Entrenador_1{
+    Nombre = "Fernando Batista"
+    Acreditacion = Oro panamericano, Preolimpico Sudamericano
+    Anos_Exp = 8
+    Telefono : protegido
+    Direccion : privada
+}
+object Entrenador_2{
+    Nombre = "Nestor Lorenzo"
+    Acreditacion = Torneo Apertura
+    Anos_Exp = 3
+    Telefono : protegido
+    Direccion : privada
+}
+
+object Equipo_1{
+    Nombre = Federacion Venezolana de Futbol (FVF)
+    Registro = 23678
+}
+
+object Equipo_2{
+    Nombre = Federacion Colombiana de Futbol (FCF)
+    Registro = 13245
+}
+
+object Juego{
+    Localidad = Chile
+    Puntuacion = 10 - 7
+}
+
+Equipo_1 *-- Jugador_1
+Equipo_1 *-- Jugador_2
+Equipo_1 *-- Jugador_3
+Equipo_1 *-- Entrenador_1
+
+Equipo_2 *-- Jugador_4
+Equipo_2 *-- Jugador_5
+Equipo_2 *-- Jugador_6
+Equipo_2 *-- Entrenador_2
+
+Juego *-- Equipo_1
+Juego *-- Equipo_2
+
+@enduml
